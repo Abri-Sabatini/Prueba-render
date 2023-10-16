@@ -11,8 +11,10 @@ public interface BaseService  <E extends Base,ID extends Serializable>{
 
   // creamos todos los métodos Abstractos
 
-// Para listar todos los registros
+    // Para listar todos los registros
     public List<E> findAll() throws Exception;
+    //Devuelve los datos paginados
+    public Page<E> findAll(Pageable pageable) throws Exception;
     // Para buscar un registro en la base de Datos, pasando un id como parámetro
     public E findById(ID id) throws Exception;
     // Grabo la entidad genérica
